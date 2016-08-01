@@ -4,9 +4,12 @@
   "description": "Statically type checked model updates using Flow",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "flow-update.js"
   ],
   "scripts": {
+    "lint": "eslint index.js",
+    "test": "npm run lint && mocha"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,8 @@
   },
   "homepage": "https://github.com/gcanti/flow-update",
   "devDependencies": {
+    "eslint": "3.2.0",
+    "mocha": "3.0.0"
   },
   "tags": [
     "flow",
