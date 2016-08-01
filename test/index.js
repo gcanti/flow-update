@@ -77,6 +77,28 @@ describe('swapArray', function () {
 
 });
 
+describe('spliceArray', function () {
+
+  it('should not change reference if no changes occur', function () {
+    var a1 = [1, 2];
+    var a2 = u.spliceArray(a1, []);
+    assert.strictEqual(a1, a2);
+  });
+
+  it('should change reference changes occur', function () {
+    var a1 = ['angel', 'clown', 'mandarin', 'surgeon'];
+    var a2 = u.spliceArray(a1, [{ start: 2, deleteCount: 0, items: ['drum'] }]);
+    assert.ok(a1 !== a2);
+  });
+
+  it('should update the array', function () {
+    var a1 = ['angel', 'clown', 'mandarin', 'surgeon'];
+    var a2 = u.spliceArray(a1, [{ start: 2, deleteCount: 0, items: ['drum'] }]);
+    assert.deepEqual(a2, [ 'angel', 'clown', 'drum', 'mandarin', 'surgeon' ]);
+  });
+
+});
+
 describe('removeDictionary', function () {
 
   it('should not change reference if no changes occur', function () {
