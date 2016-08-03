@@ -4,14 +4,26 @@ Statically type checked model updates using Flow
 
 There's a [ton of packages](https://github.com/search?utf8=✓&q=immutable+update) that help to update nested objects and arrays in a declarative and immutable manner, their APIs are focused on being ergonomic for a dynamic language though.
 
-This package trades a bit of ergonomicity in favour of a suitable API for a static type checker.
+This package trades a bit of ergonomics in favour of a suitable API for a static type checker.
+
+# API
+
+Please see the [libdef](https://github.com/gcanti/flow-update/blob/master/flow-update.js) file.
 
 # Usage
+
+**Note**. Add `./node_modules/flow-update/flow-update.js` to your libdefs.
 
 ```js
 // @flow
 
-import { mergeObject, mergeArray, swapArray, spliceArray, removeDictionary } from './flow-update'
+import {
+  mergeObject,
+  mergeArray,
+  swapArray,
+  spliceArray,
+  removeDictionary
+} from 'flow-update'
 
 type Person = {
   name: string,
