@@ -6,13 +6,11 @@ There's a [ton of packages](https://github.com/search?utf8=✓&q=immutable+updat
 
 This package trades a bit of ergonomics in favour of a suitable API for a static type checker.
 
-# API
+# Flow configuration
 
-Please see the [libdef](https://github.com/gcanti/flow-update/blob/master/flow-update.js) file.
+This library leverages the shadow files technique, so no configuration required.
 
 # Usage
-
-**Note**. Add `./node_modules/flow-update/flow-update.js` to your libdefs.
 
 ```js
 // @flow
@@ -69,3 +67,8 @@ mergeDictionary(dict, { a: 1 })
 removeDictionary(dict, ['a'])
 // removeDictionary(dict, ['a', 'c']) // <= error
 ```
+
+# API
+
+Please see the [index.js](https://github.com/gcanti/flow-update/blob/master/src/index.js) file.
+
